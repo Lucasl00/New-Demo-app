@@ -19,7 +19,7 @@ public class TransactionValidatorTest {
 
     @Test
     public void validAmount_overLimit_returnsFalse() {
-        assertFalse(TransactionValidator.isValidAmount(10001));
+        assertFalse(TransactionValidator.isValidAmount(10000));
     }
 
     @Test
@@ -35,6 +35,6 @@ public class TransactionValidatorTest {
 
     @Test
     public void hasSufficientBalance_notEnoughFunds_returnsFalse() {
-        assertFalse(TransactionValidator.hasSufficientBalance(100, 150));
+        assertFalse(TransactionValidator.hasSufficientBalance(90, 150));
     }
 }
